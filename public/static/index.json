@@ -1,0 +1,27 @@
+{
+	"ret": true,
+	"data": {
+		"banner": [{
+			"id": "banner1",
+			"imgUrl": "http://image31.bookschina.com/pro-images/180207cj/700263.jpg?id=5"
+		},{
+			"id": "banner2",
+			"imgUrl": "http://image31.bookschina.com/pro-images/180207cj/a700263.jpg?id=5"
+		},{
+			"id": "banner3",
+			"imgUrl": "http://image31.bookschina.com/pro-images/180202xc/700263.jpg"
+		},{
+			"id": "banner4",
+			"imgUrl": "http://image31.bookschina.com/pro-images/180202fr/700263.jpg"
+		},{
+			"id": "banner5",
+			"imgUrl": "http://image31.bookschina.com/pro-images/180126star/700263.jpg?id=5"
+		},{
+			"id": "banner6",
+			"imgUrl": "http://image31.bookschina.com/uploadfiles/images/m6907_ad990.jpg?id=6"
+		},{
+			"id": "banner7",
+			"imgUrl": "http://image31.bookschina.com/pro-images/180126shaoer/700263.jpg?id=5"
+		}]
+	}
+}

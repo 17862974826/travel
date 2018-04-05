@@ -1,0 +1,15 @@
+#root .swiper-pagination {
+	background: rgba(0, 0, 0, .5);
+	width: auto;
+	right: 0.15rem;
+	left: auto;
+	border-radius: 0.1rem;
+}
+
+#root .swiper-pagination-bullet {
+	background: rgba(255,255,255,0.6)
+}
+
+#root .swiper-pagination-bullet-active {
+	background-color: #fe435d;
+}
