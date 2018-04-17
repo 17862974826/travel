@@ -1,0 +1,19 @@
+.iconsList {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.iconsItem {
+	width: 25%;
+	padding-top: .3rem;
+	text-align: center;
+}
+
+.iconImg {
+	width: .5rem;
+	height: .5rem;
+}
+
+.iconTitle {
+	margin: .2rem 0;
+}

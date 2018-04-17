@@ -1,0 +1,45 @@
+.header {
+	position: relative;
+	padding: 0 .15rem;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	height: 1.2rem; 
+	line-height: 1.25rem;
+}
+
+.header::after {
+	content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: .02667rem;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.backBtn {
+  width: .9rem;
+  height: 1rem;
+  text-align: center;
+}
+
+.backBtn::after {
+  content: '';
+  width: .29rem;
+  height: .58rem;
+  display: inline-block;
+  background: url(/sprites.png) 0 0 no-repeat;
+  background-size: 4rem auto;
+  vertical-align: middle;
+}
+
+.actionYear {
+	font-size: .42rem
+}
+
+.all {
+	font-size: .4rem;
+  color: #fff;
+  margin-right: .2rem;
+}

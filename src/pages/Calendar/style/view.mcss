@@ -1,0 +1,5 @@
+.container {
+	height: 100%;
+	background: #309296 url(/bg.png) no-repeat center top;
+	backround-size: 100% auto;
+}

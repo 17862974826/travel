@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { actionData } from './actionCreator'
 import Header from './components/header'
 import Banner from './components/banner'
+import Icons from './components/icons'
 import BScroll from 'better-scroll'
 import style from './style/view.mcss'
 import { Link } from 'react-router-dom'
@@ -11,10 +12,11 @@ class View extends Component {
 	render () {
 		return (
 			<div className={style.root}>
+				<Header></Header>
 				<div className={style.wrapper} ref="wrapper">
 					<div className={style.content}>
-						<Header></Header>
 						<Banner></Banner>
+						{/* <Icons></Icons>*/}
 					</div>
 				</div>
 				<div className={style.footer}>
