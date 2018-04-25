@@ -4,6 +4,7 @@ import { actionData } from './actionCreator'
 import Header from './components/header'
 import Banner from './components/banner'
 import Icons from './components/icons'
+import Content from './components/content'
 import BScroll from 'better-scroll'
 import style from './style/view.mcss'
 import { Link } from 'react-router-dom'
@@ -16,7 +17,8 @@ class View extends Component {
 				<div className={style.wrapper} ref="wrapper">
 					<div className={style.content}>
 						<Banner></Banner>
-						{/* <Icons></Icons>*/}
+						<Icons></Icons>
+						<Content></Content>
 					</div>
 				</div>
 				<div className={style.footer}>

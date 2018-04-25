@@ -6,7 +6,7 @@ const actionHomeData = (value) => ({
 })
 export const actionData = () => {
 	return (dispatch) => {
-		fetch('/api/index')
+		fetch('/api/home')
 			.then(res => (res.json()))
 			.then(res => {
 				res.data && (res = res.data)
