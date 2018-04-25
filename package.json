@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://192.168.0.107:3000/",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",

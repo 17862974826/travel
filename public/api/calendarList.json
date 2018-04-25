@@ -1,0 +1,21 @@
+"ret": true,
+	"data": {
+    "banner" : [ 
+        {
+            "link" : "http://m.mafengwo.cn/i/8320854.html",
+            "imgUrl" : "https://n2-q.mafengwo.net/s11/M00/35/93/wKgBEFrEnmaASpXmAAbqWHODh3A43.jpeg?imageMogr2%2Fthumbnail%2F%21750x422r%2Fgravity%2FCenter%2Fcrop%2F%21750x422%2Fquality%2F90",
+            "id" : "banner1"
+        }, 
+        {
+            "link" : "http://m.mafengwo.cn/i/8815058.html",
+            "imgUrl" : "https://p1-q.mafengwo.net/s11/M00/B8/BD/wKgBEFrEJjmAUNbLAAwszEBKHTw21.jpeg?imageMogr2%2Fthumbnail%2F%21750x422r%2Fgravity%2FCenter%2Fcrop%2F%21750x422%2Fquality%2F90",
+            "id" : "banner2"
+        }, 
+        {
+            "link" : "http://m.mafengwo.cn/i/8504606.html",
+            "imgUrl" : "https://p4-q.mafengwo.net/s11/M00/99/CE/wKgBEFrCO3qAJhoDAAi5MZvxcx863.jpeg?imageMogr2%2Fthumbnail%2F%21750x422r%2Fgravity%2FCenter%2Fcrop%2F%21750x422%2Fquality%2F90",
+            "id" : "banner3"
+        }
+    ]
+   }
+ }

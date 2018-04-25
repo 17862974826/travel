@@ -6,10 +6,10 @@ export default class Header extends Component {
 		return (
 			<div className={style.wrapper}>
 				<div className={style.logo}>
-					<img src="http://m.bookschina.com/images/logo.jpg" alt="" />
+					<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2428856136,3987620462&fm=27&gp=0.jpg" alt="" />
 				</div>
 				<div className={style.search}>
-					<input type="text"  className={style.txt} placeholder="搜索图书名、ISBN" />
+					<input type="text"  className={style.txt} placeholder="搜索目的地/攻略/游记" />
 					<span className={style.search_icon}>
 						<i className="iconfont">&#xe600;</i>
 					</span>

@@ -6,7 +6,7 @@
 .logo {
 	display: flex;
 	align-items: center;
-	width: 2.13rem;
+	width: 2rem;
 }
 .logo img {
 	width: 100%;
@@ -16,7 +16,7 @@
 	align-items: center;
 }
 .search {
-	width: 50%;
+	width: 60%;
 	position: relative;
 }
 .txt {

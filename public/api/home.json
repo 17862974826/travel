@@ -1,0 +1,58 @@
+{
+	"ret": true,
+	"data": {
+    "banner" : [ 
+        {
+            "link" : "http://m.mafengwo.cn/i/8320854.html",
+            "imgUrl" : "https://n2-q.mafengwo.net/s11/M00/35/93/wKgBEFrEnmaASpXmAAbqWHODh3A43.jpeg?imageMogr2%2Fthumbnail%2F%21750x422r%2Fgravity%2FCenter%2Fcrop%2F%21750x422%2Fquality%2F90",
+            "id" : "banner1"
+        }, 
+        {
+            "link" : "http://m.mafengwo.cn/i/8815058.html",
+            "imgUrl" : "https://p1-q.mafengwo.net/s11/M00/B8/BD/wKgBEFrEJjmAUNbLAAwszEBKHTw21.jpeg?imageMogr2%2Fthumbnail%2F%21750x422r%2Fgravity%2FCenter%2Fcrop%2F%21750x422%2Fquality%2F90",
+            "id" : "banner2"
+        }, 
+        {
+            "link" : "http://m.mafengwo.cn/i/8504606.html",
+            "imgUrl" : "https://p4-q.mafengwo.net/s11/M00/99/CE/wKgBEFrCO3qAJhoDAAi5MZvxcx863.jpeg?imageMogr2%2Fthumbnail%2F%21750x422r%2Fgravity%2FCenter%2Fcrop%2F%21750x422%2Fquality%2F90",
+            "id" : "banner3"
+        }
+    ],
+    "icons" : [ 
+        {
+            "id" : "icon1",
+            "imgUrl" : "http://pic.c-ctrip.com/h5/group_travel/icon610-index_01.png",
+            "title" : "找攻略",
+            "color" : "#ff9d00"
+        }, 
+        {
+            "id" : "icon2",
+            "imgUrl" : "http://pic.c-ctrip.com/h5/group_travel/icon610-index_08.png",
+            "title" : "看游记",
+            "color" : "#feca2b"
+        }, 
+        {
+            "id" : "icon3",
+            "imgUrl" : "http://pic.c-ctrip.com/h5/group_travel/icon610-index_04.png",
+            "title" : "酒店",
+            "color" : "#32a2f1"
+        }, 
+        {
+            "id" : "icon4",
+            "imgUrl" : "http://pic.c-ctrip.com/VacationH5Pic/group_travel/index/guide2.png",
+            "title" : "结伴",
+            "color" : "#acce0e"
+        }
+    ],
+    "content": [{
+            "id" : "content4",
+            "imgUrl" : "https://b2-q.mafengwo.net/s11/M00/7A/EA/wKgBEFqXvV6ABVPSAA3Tva8b6Qc01.jpeg?imageMogr2%2Fthumbnail%2F%21288x218r%2Fgravity%2FCenter%2Fcrop%2F%21288x218%2Fquality%2F90",
+            "title" : " 厦门4日游，一个人自由行攻略",
+            "summary" : " 2018年的 海南 不知道经历了什么，乌泱泱的一群人没有票出岛。同样回程 深圳 的票也售馨，于是， 海南 妹子怀揣 厦门 机票开始一个人的旅行(●°u°●)​ 」 12点到高崎机场，由于我本人较懒，我选了 中山 路的青旅(建议不要频繁更换，浪费时间不说，绝对累瘫)ｸﾞｯ!(๑•̀ㅂ•́)و✧ 交通 从机场到青旅的路程绝对考验路痴等级。个人经济线路如下(土豪可以略过 ) 机场免费大巴>T4候机楼>BRT(往第一码头方向)>思北站下车>左拐右拐步行约20分钟 你就可以开心到青旅了 午休两个小时后就可以去觅食了！ 对于八级吃货我是很认真做攻略，附️",
+            "flag" : true,
+            "author" : " Hannah",
+            "visit" : 4276
+        }
+      ]
+	}
+}
