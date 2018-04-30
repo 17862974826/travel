@@ -101,16 +101,16 @@
   box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
 }
 
-.monthBd li.today {
+.monthBd .today {
   width: 4.3rem;
   height: 2.8rem;
 }
 
-.monthBd li.second {
+.monthBd .second {
   height: 2.8rem;
 }
 
-.monthBd li.second img {
+.monthBd .second img {
   object-fit: cover;
 }
 

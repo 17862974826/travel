@@ -1,0 +1,86 @@
+.contentItemCon {
+	padding: .65rem 0;	
+  display: block;
+}
+
+.contentItemCon::after {
+	content: '';
+	display: table;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+.itemLeft {
+	box-sizing: border-box;
+	float: left;
+  width: 48%;
+  height: 2.4rem;
+  padding: 0 .4rem;
+  position: relative;
+}
+
+.itemLeft::after {
+	content: '';
+  position: absolute;
+  left: .4rem;
+  right: .4rem;
+  bottom: -.45rem;
+  height: 0;
+  border-bottom: .01333rem solid #e5e5e5;
+}
+
+.itemTitle {
+  margin: .08rem 0 .18rem;
+  font-size: .38rem;
+  height: 1.92rem;
+  line-height: .64rem;
+  color: #111;
+  overflow: hidden;
+  padding: 0;
+  word-break: break-all;
+}
+
+.position
+.praise {
+	font-size: .32rem;
+  color: #999;
+  line-height: .53333rem;
+}
+
+.praise i {
+	margin-right: .05333rem;
+  width: .32rem;
+  height: .26667rem;
+  display: inline-block;
+  background: url(https://css.mafengwo.net/mobile/images/post/note/icon.png) -.66667rem 0 no-repeat;
+  background-size: 1.33333rem auto;
+  vertical-align: top;
+}	
+
+.itemImgCon {
+	float: right;
+  width: 52%;
+}
+
+.itemImgCon img {
+	width: 100%;
+  height: 100%;
+}
+
+.contentCon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.mask {
+  height: 158px;
+}
+
+.content {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: #fff;
+}

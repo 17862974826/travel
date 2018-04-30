@@ -1,0 +1,87 @@
+.detail-con {
+	background: skyblue;
+	padding: 15px 10px 20px;
+}
+
+.pic {
+	width: 100%;
+}
+
+.content,
+.recommend-con,
+.commit-con {
+	background: #fff;
+	border-radius: 6px;
+	padding: 10px;
+}
+
+.content-con h2 {
+	font-size: .38rem;
+	font-weight: 600;
+	padding: 10px 0;
+}
+
+.content-con p {
+	padding: 10px 0;
+	font-size: .32rem;
+	line-height: .34rem;
+	color: #333;
+}
+
+.recommend-item {
+	margin: 10px;
+	border-bottom: 2px dashed #ccc;
+	display: flex;
+	align-items: center;
+}
+
+.user-pic {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: #000;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+
+.recommend-item-info {
+	flex: 1;
+}
+
+.recommend-item-info p {
+	font-size: .32rem;
+	color: #333;
+	margin: 5px 0;
+}
+
+.recommend-item-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.show-recommend {
+	font-size: .36rem;
+	color: #333;
+	padding: 15px 10px;
+	border-bottom: 1px dashed #ccc;
+}
+
+.commit-con {
+	display: flex;
+	justify-content: space-between;
+}
+
+.comment-inp {
+	width: 250px;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+.comment-btn {
+	border: 1px solid #ccc;
+	background: skyblue;
+	width: 45px;
+	border-radius: 5px;
+	color: #fff;
+}

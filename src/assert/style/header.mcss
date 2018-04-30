@@ -6,7 +6,7 @@
 .logo {
 	display: flex;
 	align-items: center;
-	width: 2rem;
+	width: 1.4rem;
 }
 .logo img {
 	width: 100%;

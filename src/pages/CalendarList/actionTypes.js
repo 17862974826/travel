@@ -1,0 +1,1 @@
+export const CALENDARLISTDATA = 'calendarList_calendarListData'

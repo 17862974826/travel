@@ -30,15 +30,12 @@ class Year extends Component {
 						{
 							item.record.map((imgItem, imgIndex) => {
 								return (
-									<li
-										key={imgItem.id}
-										className={!index && !imgIndex ? style.today : (!index && imgIndex === 1 ? style.second : null)}
-									>
-										<Link to={'/calendarDetail?id=' + imgItem.id}>
+									<Link to={`/detail/travel/${index % 3 + 1}`} key={imgItem.id}>
+										<li className={!index && !imgIndex ? style.today : (!index && imgIndex === 1 ? style.second : null)}>
 											<img src={imgItem.imgUrl} alt=''></img>
 											<span className={style.num}>{imgItem.date}</span>
-										</Link>
-									</li>
+										</li>
+									</Link>
 								)
 							})
 						}

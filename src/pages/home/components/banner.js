@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import '../../../assert/style/swiper.min.css'
 import swiper from '../../../../node_modules/swiper/dist/js/swiper.min.js'

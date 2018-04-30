@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { actionData } from './actionCreator'
+import { actionData, actionLoadMoreData } from './actionCreator'
 import Header from './components/header'
 import Banner from './components/banner'
 import Icons from './components/icons'
@@ -8,8 +8,8 @@ import Content from './components/content'
 import BScroll from 'better-scroll'
 import style from './style/view.mcss'
 import { Link } from 'react-router-dom'
-class View extends Component {
 
+class View extends Component {
 	render () {
 		return (
 			<div className={style.root}>
@@ -49,18 +49,46 @@ class View extends Component {
 
 	componentDidMount () {
 		this.props.createdScroll(this)
-		this.props.getHomeData()
+		this.props.getHomeData(this)
+
+		const { pSize } = this.props
+
+		this.scroll.on('pullingUp', () => {
+    		this.props.getHomeLoadMore(pSize, this)
+  	})
 	}
 
 }
 
+const mapState = (state) => {
+	const { pNum, pSize } = state.Home
+	return {
+		pNum,
+		pSize
+	}
+}
+
 const mapDispatch = (dispatch) => ({
 	createdScroll (context) {
-		context.scroll = new BScroll(context.refs.wrapper)
+		context.scroll = new BScroll(context.refs.wrapper, {
+			pullUpLoad: {
+			  threshold: -20
+			},
+			click: true
+		})
 	},
-	getHomeData () {
-		dispatch(actionData())
+	getHomeData (context) {
+		dispatch(actionData(context))
+	},
+	getHomeLoadMore( pSize, context) {
+		const { pNum } = context.props || {}
+
+		dispatch(actionLoadMoreData({
+			pNum,
+			pSize,
+			context
+		}))
 	}
 })
 
-export default connect(null, mapDispatch)(View)
+export default connect(mapState, mapDispatch)(View)

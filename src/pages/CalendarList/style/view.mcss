@@ -1,0 +1,33 @@
+.navigatorShowMaskCon {
+	position: fixed;
+	top: 0;
+	padding: 5px;
+	width: 100%;
+	height: 40px;
+	background: #fafafa;
+	opacity: 0;
+	transition: 1s;
+}
+
+.navigatorShowMask {
+	display: flex;
+}
+
+.navigatorShowMask p {
+	color: rgb(255, 157, 0);
+	height: 40px;
+	line-height: 40px;
+	font-size: .38rem;
+}
+
+.smallBanner {
+	margin-left: 105px;
+	width: 40px;
+	height: 40px;
+}
+
+.smallBanner img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
