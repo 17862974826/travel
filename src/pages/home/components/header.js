@@ -6,7 +6,7 @@ export default class Header extends Component {
 		return (
 			<div className={style.wrapper}>
 				<div className={style.logo}>
-					<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2428856136,3987620462&fm=27&gp=0.jpg" alt="" />
+					<img src="/logo.jpg" alt="" />
 				</div>
 				<div className={style.search}>
 					<input type="text"  className={style.txt} placeholder="搜索目的地/攻略/游记" />

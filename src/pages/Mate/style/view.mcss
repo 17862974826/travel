@@ -1,0 +1,293 @@
+.wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+}
+
+.header {
+	height: 1.1rem;
+	border-bottom: 1px solid #ccc;
+	padding: 0 10px;
+	text-align: center;
+	line-height: 1.1rem;
+	font-size: .36rem;
+	color: #333;
+}
+
+.tab {
+	display: flex;
+	height: 0.8rem;
+	text-align: center;
+	color: #474747;
+	font-size: 0.34rem;
+	border-bottom: 1px solid #ccc
+}
+.target {
+	flex: 1;
+	line-height: 0.8rem;
+  background-color: #fafafa;
+  border-right: 1px solid #ccc;
+
+}
+.activeTab {
+	flex: 1;
+	line-height: 0.8rem;
+	background-color: #fff;
+  color: #ffba33;
+}
+.time {
+	flex: 1;
+	line-height: 0.8rem;
+	 background-color: #fafafa;
+}
+
+.content {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.try {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	line-height: 3rem;
+	font-size: .36rem;
+	color: #ccc;
+	text-align: center;
+}
+
+.banner {
+	position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.vam {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.vam ul {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.vam li {
+	display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+
+.vam span {
+  margin: -5px 6px 0;
+}
+
+.vam em {
+  display: inline-block;
+  margin-bottom: 10px;
+  line-height: 24px;
+  font-style: normal;
+  font-size: 24px;
+  font-family: Georgia;
+  vertical-align: top;
+}
+
+.listCon {
+	padding: 10px 0 0 10px;
+}
+
+.item {
+	float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.item a {
+	margin: 0 10px 10px 0;
+	display: block;
+  box-sizing: border-box;
+  border: 1px solid #e6e5e5;
+  background-color: #fff;
+}
+
+.cover {
+	position: relative;
+  box-sizing: border-box;
+  min-height: 30px;
+}
+
+.cover img {
+	width: 100%;
+}
+
+.title {
+	position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  padding: 13px 10px;
+  font-size: 17px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  line-height: 20px;
+}
+
+.title h3 {
+	width: 100%;
+  height: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+.departureDate {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  background-color: #41c6ad;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-size: 13px;
+  padding: 0 9px 0 10px;
+  border-radius: 24px 0 0 24px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+.info {
+  padding: 22px 10px 13px 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.userPic {
+	position: absolute;
+  left: 15px;
+  top: -17px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+.userPic img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.name {
+  display: block;
+  height: 14px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #696969;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.level {
+	font-size: 12px;
+   color: #fa9f00;
+}
+
+.location {
+	padding-left: 6px;
+  font-size: 11px;
+  color: #696969;
+}
+
+.txt {
+	margin-top: 5px;
+  font-size: 10px;
+  color: #a4a4a4;
+  line-height: 12px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255,255,255,0.95);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.getMateBtn {
+	margin: 0 auto;
+	display: block;
+	width: 80%;
+  height: 30px;
+  background-color: #f39c11;
+  border-radius: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.distances,
+.startDate {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	z-index: 6;
+}
+
+.distances ul,
+.startDate ul {
+	border-bottom: 1px solid #ccc;
+}
+
+.distances ul li,
+.startDate ul li {
+	padding-left: 15px;
+	height: 45px;
+	line-height: 45px;
+  border-bottom: 1px solid #ebebeb;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.startDate ul li {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15px;
+}
+
+.mateCount {
+	color: #ffba33;
+}

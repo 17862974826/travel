@@ -1,4 +1,4 @@
-import { HOTELLISTDATA } from './actionTypes'
+import { HOTELDETAILDATA } from './actionTypes'
 
 const defaultState = {
 	data: []
@@ -6,10 +6,10 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
 	const data = action.payload
 	switch (action.type) {
-		case HOTELLISTDATA: {
+		case HOTELDETAILDATA: {
 			return {
 				...state,
-				data: data.data
+				data: data.data		
 			}
 		}
 		default: return state

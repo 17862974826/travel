@@ -1,71 +1,124 @@
 .header {
-	display: flex;
 	height: 1.1rem;
 	border-bottom: 1px solid #ccc;
 	padding: 0 10px;
-	align-items: center;
-}
-
-.logo {
-	display: flex;
-	align-items: center;
-	width: 1.4rem;
-}
-.logo img {
-	width: 100%;
-}
-
-.home {
-	margin-left: 80px;
-	color: #000;
-	font-size: .36rem;
-}
-
-.distanceCon {
-	padding: 10px;
-}
-
-.distance {
-	font-size: .36rem;
-	color: #474747;
-}
-
-.chooseDistance {
-	color: #c1c1c1;
-	flex: 1;
-    padding: .48rem 0 .28rem 0;
-    font-size: .38rem;
-    font-weight: 600;
-    text-align: center;
-    position: relative;
-    border: 0;
-}
-
-.cityItem {
-	font-size: .32rem;
-	color: #474747;
 	text-align: center;
-	line-height: .44rem;
-	height: .44rem;
+	line-height: 1.1rem;
+	font-size: .36rem;
+	color: #333;
 }
 
-.distanceItems {
-	height: 0;
-	opacity: 0;
-	transition: 1s;
+.sortCon {
+	display: flex;
+	justify-content: space-around;
+	background: #f7f7f7;
+	box-shadow: 0 2px 0 #eee; 
 }
 
-.searchHotalBtn {
+.sortCon p {
+	width: 33%;
+	margin: .33rem 0;
+	font-size: .34rem;
+	color: #333;
+	text-align: center;
+}
+
+.priceSort {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.item {
+	color: #333;
 	display: block;
-    width: 90%;
-    height: 1rem;
-    margin: 0 auto;
-    line-height: 1rem;
-    background: #ffe24c;
-    border-radius: .06rem;
-    border: 0;
-    color: #474747;
-    font-size: .48rem;
-    font-weight: 400;
-    text-align: center;
+	position: relative;
+	display: block;
+  padding: 20px 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+dl, dd {
+	margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+
+.image {
+	float: left;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.image img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+dd {
+  padding-left: 110px;
+  min-height: 100px;
+  height: auto;
+  position: relative;
+  line-height: 1.2;
+}
+
+.title {
+	margin-left: 112px;
+}
+
+.title h3 {
+	height: 20px;
+  margin-left: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+}
+
+.tips {
+	margin-left: 112px;
+	font-size: 14px;
+	color: #333;
+	padding-top: 64px;
+}
+
+.location {
+  position: absolute;
+  left: 112px;
+  top: 50px;
+  font-size: 14px;
+  margin-right: 80px;
+  color: orange;
+}
+
+.rpos {
+	position: absolute;
+  right: 0;
+  bottom: auto;
+  top: 78px;
+  padding-left: 5px;
+  text-align: right;
+  background-color: #fff;
+}
+
+.price {
+	color: #999;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.price span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-size: 335px auto;
+  background-position: -100px -80px;
+}
+
+.price strong {
+  color: #f94226;
+  font-size: 20px;
+  margin: 0 2px;
 }

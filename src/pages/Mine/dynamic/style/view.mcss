@@ -1,0 +1,187 @@
+.wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0 20px;
+	background: #fff;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	color: #000;
+	font-size: .38rem;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+.header::before {
+	content: '';
+	width: 0;
+}
+
+.publish {
+	font-size: .28rem;
+}
+
+.publishCon {
+	padding: 0;
+	height: 0;
+	opacity: 0;
+	transition: 1s;
+}
+
+.picMaskCon {
+	position: relative;
+	margin-top: 10px;
+	width: 1rem;
+	overflow: hidden;
+}
+
+.picMask {
+	width: 1rem;
+	height: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 1rem;
+}
+
+.formFile {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.previewOuter {
+	position: relative;
+	height: 60px;
+	overflow: hidden;
+}
+
+.previewWrapper {
+	display: flex;
+	position: absolute;
+	width: 100%;
+}
+
+.previewCon {
+	display: flex;
+	width: 87%;
+	overflow: scroll;
+}
+
+.preview {
+	padding: 5px 5px 0;
+	width: 1rem;
+	height: 1rem;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.preview img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.textarea {
+	width: 100%;
+  border-color: #f2f2f2;
+}
+
+.publishBtnCon {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.publishBtn {
+	border: 0;
+	background: skyblue;
+	width: .9rem;
+	height: .36rem;
+	line-height: .36rem;
+	font-size: .28rem;
+	color: #fff;
+	border-radius: .05rem;
+}
+
+.nothing {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	color: #999;
+	clear: both;
+}
+
+.itemCon {
+	padding: 10px 0;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.authorInfo {
+	display: flex;
+}
+
+.picCon {
+	margin-right: 10px;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.picCon img {
+	width: 100%;
+	height: 100%;
+}
+
+.author {
+	font-size: .28rem;
+	color: #333;
+	height: .38rem;
+	line-height: .38rem;
+}
+
+.itemContent {
+	margin-top: 8px;
+	background: #fdfdfd;
+}
+
+.itemDesc {
+	font-size: 16px;
+	color: #333;
+	line-height: 18px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	word-break:break-all;
+}
+
+.imgsCon {
+	display: flex;
+	margin-top: 10px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+}
+
+.imgItem {
+	margin: 0 1.5% 10px;
+	width: 30%;
+	height: 1.8rem;
+}
+
+.imgItem img {
+	width: 100%;
+	height: 100%;
+}

@@ -1,1 +1,1 @@
-export const HOTELDATA = 'Hotel_hoteldata'
+export const HOTELLISTDATA = 'HotelList_hotellistdata'

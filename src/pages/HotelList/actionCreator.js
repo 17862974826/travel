@@ -1,18 +1,18 @@
-import { HOTELDATA } from './actionTypes'
+import { HOTELLISTDATA } from './actionTypes'
 
-const actionHotelData = (value) => ({
-	type: HOTELDATA,
+const actionHotelListData = (value) => ({
+	type: HOTELLISTDATA,
 	payload: value
 })
 
 
-export const actionData = () => {
+export const actionData = (city, flag) => {
 	return (dispatch) => {
-		fetch(`/api/hotel`)
+		fetch(`/api/hotelContent?city=${city}&flag=${flag}`)
 			.then(res => (res.json()))
 			.then(res => {
 				if (!res.ret) return
-				dispatch(actionHotelData(res))
+				dispatch(actionHotelListData(res))
 			})
 	}
 }

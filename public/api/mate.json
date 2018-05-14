@@ -1,0 +1,101 @@
+{
+	"ret": true,
+	"message": "返回成功",
+	"data": {
+		"distances": ["丽江", "西藏"],
+		"startDate": [["全部出发时间", "1234"], ["今天", "12"], ["1个月内", "234"], ["1-3个月内", "456"], ["3个月以上", "234"]],
+		"banner": "https://images.mafengwo.net/mobile/images/together/topNum-bg.jpg",
+		"travelPlans": "363567",
+		"people": "148437",
+		"targets": "376485",
+		"teams": [{
+			"id": "1",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}, {
+			"id": "2",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}, {
+			"id": "3",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}, {
+			"id": "4",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}, {
+			"id": "5",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}, {
+			"id": "6",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}, {
+			"id": "7",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}, {
+			"id": "8",
+			"imgUrl": "https://n4-q.mafengwo.net/s7/M00/21/EF/wKgB6lSTy-2AIt07AAYp5WYMv5A35.jpeg?imageMogr2%2Fthumbnail%2F%21200x130r%2Fgravity%2FCenter%2Fcrop%2F%21200x130%2Fquality%2F100",
+			"title": "冈仁波齐|拉萨|阿里|",
+			"days": "15-30天",
+			"start": "05月15日",
+			"picUrl": "https://n3-q.mafengwo.net/s11/M00/36/53/wKgBEFp4OpOAQlrHAAaTAKToIT085.jpeg?imageMogr2%2Fthumbnail%2F%21120x120r%2Fgravity%2FCenter%2Fcrop%2F%21120x120%2Fquality%2F90",
+			"name": "远行",
+			"level": "lv 15",
+			"location": "成都",
+			"desc": "阿里大环线，拼车费，拼吃住，想去的朋友约起来！2018年，..."
+		}]
+	}
+}

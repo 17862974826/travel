@@ -11,23 +11,38 @@ class Content extends Component {
 				<div className={style.content}>
 					{
 						this.props.listData.map((item, index) => (
-							<Link to={`/detail/travel/${index % 3 + 1}`} key={item.id} className={style.contentItemCon}>
-								<div className={style.itemLeft}>
-									<h3 className={style.itemTitle}>{item.title}</h3>
-									<div style={{display: 'flex', justifyContent: 'space-between'}}>
-										<p className={style.position}>在<span style={{color: '#ff9d00'}}>{item.city}</span></p>
-										<p className={style.praise}><i></i>{item.praise}</p>
+							<div onClick={this.handleAddPraise.bind(this, item.id)} key={item.id}>
+								<Link to={`/detail/travel/${index % 3 + 1}`} className={style.contentItemCon}>
+									<div className={style.itemLeft}>
+										<h3 className={style.itemTitle}>{item.title}</h3>
+										<div style={{display: 'flex', justifyContent: 'space-between'}}>
+											<p className={style.position}>在<span style={{color: '#ff9d00'}}>{item.city}</span></p>
+											<p className={style.praise}><i></i>{item.praise}</p>
+										</div>
 									</div>
-								</div>
-								<div className={style.itemImgCon}>
-									<img src={item.imgUrl} alt='' />
-								</div>
-							</Link>
+									<div className={style.itemImgCon}>
+										<img src={item.imgUrl} alt='' />
+									</div>
+								</Link>
+							</div>
 						))
 					}
 				</div>
 			</div>
 		)
+	}
+
+	handleAddPraise = (id) => {
+		console.log(id)
+		fetch(`/api/savePraise?id=${id}`)
+			.then(res => {
+				if (res == "undefined" || res == "null") return res = {}
+				res.json()
+			})
+			.then(res => {
+				console.log(res)
+			})
+			
 	}
 }
 

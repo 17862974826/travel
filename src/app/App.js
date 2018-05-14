@@ -12,6 +12,12 @@ import { View as CalendarList } from '../pages/CalendarList/'
 import { View as Detail } from '../pages/Detail'
 import { View as Hotel } from '../pages/Hotel'
 import { View as HotelList } from '../pages/HotelList'
+import { View as HotelDetail } from '../pages/HotelDetail'
+import { View as Mine } from '../pages/Mine'
+import { View as Strategy } from '../pages/Strategy'
+import { View as Mate } from '../pages/Mate'
+import { Login } from '../pages/User'
+import { View as Share } from '../pages/Mine/dynamic/'
 import '../assert/style/reset.css'
 import '../assert/font/iconfont.css'
 
@@ -26,7 +32,13 @@ class App extends Component {
         <Route path="/calendarList" component={ CalendarList }/>
         <Route path="/detail" component={ Detail }/>
         <Route path="/hotel" component={ Hotel }/>
-        <Route path="/hotelList" component={ HotelList }/>
+        <Route path="/hotalList" component={ HotelList }/>
+        <Route path="/hotelDetail" component={ HotelDetail }/>
+        <Route path="/login" component={ Login }/>
+        <Route path="/mine" component={ Mine }/>
+        <Route path="/strategy" component={ Strategy }/>
+        <Route path="/mate" component={ Mate }/>
+        <Route path="/share" component={ Share }/>
       </Switch>
      </Router>
     </Provider>

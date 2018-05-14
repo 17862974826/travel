@@ -1,0 +1,104 @@
+
+.picWrap {
+	position: relative;
+	width:100%;
+	height: 30vh;
+	overflow: hidden;
+}
+
+.pic {
+	width: 100%;
+	height: 100%;
+}
+.title {
+	position: absolute;
+	bottom: .2rem;
+	left: .2rem;
+	font-size: .32rem;
+    color: #FFF;
+    line-height: .32rem;
+    margin-top: .32rem;
+    margin-bottom: .12rem;
+    text-shadow: 0.04rem 0.04rem 0.04rem rgba(0,0,0,0.8);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.desc {
+	text-indent: .2rem;
+	margin: .3rem .4rem 0;
+	padding-bottom: .4rem;
+	font-size: .3rem;
+	color: #111;
+	line-height: .38rem;
+	background: #fff;
+}
+.pay {
+	position: fixed;
+	bottom: 0;
+	height: 1rem;
+	width: 100%;
+	display: flex;
+	background:#fff;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.parchase {
+	flex: 1;
+	font-size: 0.4rem;
+	text-align: center;
+	line-height: 1rem;
+	color: #fff;
+	background: linear-gradient(115deg,#4b93dd,#4f71d1)
+}
+.down {
+	flex: 1;
+	font-size: 0.4rem;
+	text-align: center;
+	line-height: 1rem;
+	color: #ff5000;
+}
+
+.hotel {
+	border-top: 10px solid #f4f4f4;
+	width: 100%;
+	padding-bottom: 1rem;
+}
+.itemActive {
+	height: 2.3rem;
+	padding: .32rem;
+	display: flex;
+	border-bottom: 1px solid #ccc;
+	background: #ffe24c;
+}
+.itemContent {
+	height: 2.3rem;
+	padding: .32rem;
+	display: flex;
+	border-bottom: 1px solid #ccc
+}
+.textWrap {
+	flex: 1;
+	overflow: hidden;	
+}
+.itemPic {
+	height: 2rem;
+	width: 2rem;
+	margin-right: .25rem;
+}
+.itemTitle {
+	color: #474747;
+	font-size: .38rem;
+	font-weight: bold;
+	margin-bottom: .3rem;
+}
+.itemDesc {
+	color: #000;
+	font-size: .28rem;
+}
+.price {
+	font-size: 0.42rem;
+	color: #ff5000;
+	text-align: right;
+	margin-top: .5rem;
+}

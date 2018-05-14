@@ -10,22 +10,20 @@ class View extends Component {
 
 		this.state = {
 			distanceItem: '',
-			activeIndex: null
+			activeIndex: null,
+			searchFlag: true
 		}
 	}
 
 	render () {
 		const { distance, i2i } = this.props || {}
-		const { distanceItem } = this.state
+		const { distanceItem, searchFlag } = this.state
 
 		return (
 			<div>
-				<div className={style.header}>
-					<p className={style.logo}>
-						<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2428856136,3987620462&fm=27&gp=0.jpg" alt="" />
-					</p>
-					<Link to="/" className={style.home}>官网首页</Link>
-				</div>
+				<Link to="/">
+					<div className={style.header}>官网首页</div>
+				</Link>
 				<div className={style.distanceCon}>
 					<p className={style.distance}>目的地</p>
 					<div className={style.chooseDistance} onClick={this.handleShowDistance}>目的地/城市</div>
@@ -43,11 +41,20 @@ class View extends Component {
 						}
 					</div>
 					<Link to={`/hotalList/${distanceItem}`}>
-					  <button className={style.searchHotalBtn}>查找酒店</button>
+					  <button disabled={searchFlag} className={style.searchHotalBtn}>查找酒店</button>
 					 </Link>
 				</div>
 				<div className={style.themeRecommend}>
 					<div className={style.hotelRecommend}>主题推荐</div>
+					<div>
+						{
+							i2i.map((item, index) => (
+								<div key={index} className={style.themeRecommendItem}>
+									<img src={item} alt="" />
+								</div>
+							))
+						}
+					</div>
 				</div>
 			</div>
 		)
@@ -68,7 +75,8 @@ class View extends Component {
 	getDistance = (index, e) => {
 		this.setState({
 			distanceItem: e.target.innerHTML,
-			activeIndex: index
+			activeIndex: index,
+			searchFlag: false
 		})
 	}
 }

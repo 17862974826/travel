@@ -11,6 +11,9 @@ import { Link } from 'react-router-dom'
 
 class View extends Component {
 	render () {
+		const { username } = localStorage
+		const mineUrl = username === undefined ? "login" : "mine"
+
 		return (
 			<div className={style.root}>
 				<Header></Header>
@@ -38,7 +41,7 @@ class View extends Component {
 						<span className="iconfont" style={{fontSize: '0.5rem'}}>&#xe60f;</span>
 						<p>购物车</p>
 					</Link>
-					<Link to="/"  className={style.items}>
+					<Link to={`/${mineUrl}`}  className={style.items}>
 						<span className="iconfont" style={{fontSize: '0.5rem'}}>&#xe67d;</span>
 						<p>我</p>
 					</Link>

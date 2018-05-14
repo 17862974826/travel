@@ -7,74 +7,121 @@ import style from './style/view.mcss'
 class View extends Component {
 	constructor(props) {
 		super(props)
-
 		this.state = {
-			distanceItem: '丽江'
+			city: '丽江',
+			priceFlag: true,
+			distanceFlag: true
 		}
 	}
 
-	render () {
-		const { distance, i2i } = this.props || {}
-		const { distanceItem } = this.state
+	render() {
+		const { data } = this.props || {}
+		let panelConetnt = null
+		if(Array.isArray(data) && data.length) {
+			panelConetnt = (
+				data.map((item, index) => (
+					<Link className={style.item} key={item.id} to={`/hotelDetail/${item.id}`}>
+						<dl>
+							<dt className={style.image}>
+								<img src={item.img} alt="" />
+							</dt>
+							<dd>
+								<div className={style.title}>
+									<h3>{item.title}</h3>
+								</div>
+								<div className={style.location}>{item.value}</div>
+								<div className={style.tips}>{item.desc}</div>										
+								<div className={style.rpos}>
+									<div className={style.price}>
+										<span></span>
+										<strong>&yen;{item.price}</strong>起
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</Link>
+				)))
+		}
 
 		return (
 			<div>
-				<div className={style.header}>
-					<p className={style.logo}>
-						<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2428856136,3987620462&fm=27&gp=0.jpg" alt="" />
-					</p>
-					<Link to="/" className={style.home}>官网首页</Link>
+				<Link to="/">
+					<div className={style.header}>官网首页</div>
+				</Link>
+				<div className={style.sortCon}>
+					<p onClick={this.handleDefaultSort}>综合排序</p>
+					<p className={style.priceSort} onClick={this.handlePriceSort}>价格排序</p>
+					<p  onClick={this.handleDistanceSort}>距离排序</p>
 				</div>
-				<div className={style.distanceCon}>
-					<p className={style.distance}>目的地</p>
-					<div className={style.chooseDistance} onClick={this.handleShowDistance}>目的地/城市</div>
-					<div 
-						className={style.distanceItems} 
-						ref="distanceItems"
-						onClick={this.getDistance}
-					>
-						{
-							distance.map((item, index) => (
-								<p key={index} className={style.cityItem}>{item}</p>
-							))
-						}
-					</div>
-					<Link to={`/hotalDetail/${distanceItem}`}>
-					  <button className={style.searchHotalBtn}>查找酒店</button>
-					 </Link>
+				<div className={style.hotelItemCon}>
+					{panelConetnt}
 				</div>
 			</div>
 		)
 	}
 
-	componentDidMount () {
-		const { getHotelData } = this.props || {}
-		getHotelData()
-	}
-
-	handleShowDistance = () => {
-		this.refs.distanceItems.style.height = '1rem'
-		this.refs.distanceItems.style.opacity = 1
-	}
-
-	getDistance = (e) => {
+	componentDidMount() {
+		const { getHotelListData } = this.props || {}
+		const { location: { pathname } = {} } = this.props
+		const city = pathname.substr(11)
 		this.setState({
-			distanceItem: e.target.innerHTML
+			city
+		}, () => {
+			let flag
+			getHotelListData(city, flag="all")
+		})
+	}
+
+	handleDefaultSort = () => {
+		const { getHotelListData } = this.props || {}
+		const { city } = this.state
+		let flag
+		getHotelListData(city, flag="all")
+	}
+
+	handlePriceSort = (e) => {
+		const { getHotelListData } = this.props || {}
+		const { priceFlag, city } = this.state
+		let flag
+		if (priceFlag) {
+			e.target.innerHTML = "价格升序"
+			getHotelListData(city, flag="priceUp")
+		} else {
+			e.target.innerHTML = "价格降序"
+			getHotelListData(city, flag="priceDown")
+		}
+		this.setState({
+			priceFlag: !priceFlag
+		})
+	}
+
+	handleDistanceSort = (e) => {
+		const { getHotelListData } = this.props || {}
+		const { distanceFlag, city } = this.state
+		let flag
+		if (distanceFlag) {
+			e.target.innerHTML = "距离升序"
+			getHotelListData(city, flag="distanceUp")
+		} else {
+			e.target.innerHTML = "距离降序"
+			getHotelListData(city, flag="distanceDown")
+		}
+		this.setState({
+			distanceFlag: !distanceFlag
 		})
 	}
 }
 
 const mapState = (state) => {
-	const { distance, i2i } = state.Hotel
+	const { data } = state.HotelList
 	return {
-		distance,
-		i2i
+		data
 	}
 }
 
 const mapDispatch = (dispatch) => ({	
-	getHotelData () {
-		dispatch(actionData())
+	getHotelListData (city, flag) {
+		dispatch(actionData(city, flag))
 	}
 })
 
