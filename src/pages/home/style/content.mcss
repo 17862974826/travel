@@ -44,7 +44,7 @@
 .summary {
     overflow: hidden;
     max-height: .9rem;
-    line-height: .3rem;
+    line-height: .31rem;
     font-size: .28rem;
     padding: .14rem 0 0;
 }

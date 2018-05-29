@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import style from '../style/content.mcss'
+import { Link } from 'react-router-dom'
 
 class Content extends Component {
 
@@ -19,7 +20,7 @@ class Content extends Component {
 					{
 						this.props.content.map((val, index) => {
 							return (
-								<div className={style.contentItem} key={val.id || index}>
+								<Link to='/playDetail' className={style.contentItem} key={val.id || index}>
 									<div className={style.itemTitle}>{val.title}</div>
 									<div className={style.bottomCon}>
 										<div className={style.imgCon}>
@@ -33,7 +34,7 @@ class Content extends Component {
 											</div>
 										</div>
 									</div>
-								</div>
+								</Link>
 							)
 						})
 					}

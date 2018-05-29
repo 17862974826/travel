@@ -18,6 +18,7 @@ import { View as Strategy } from '../pages/Strategy'
 import { View as Mate } from '../pages/Mate'
 import { Login } from '../pages/User'
 import { View as Share } from '../pages/Mine/dynamic/'
+import { View as PlayDetail } from '../pages/Playing/'
 import '../assert/style/reset.css'
 import '../assert/font/iconfont.css'
 
@@ -39,6 +40,7 @@ class App extends Component {
         <Route path="/strategy" component={ Strategy }/>
         <Route path="/mate" component={ Mate }/>
         <Route path="/share" component={ Share }/>
+        <Route path="/PlayDetail" component={ PlayDetail }/>
       </Switch>
      </Router>
     </Provider>

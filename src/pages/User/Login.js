@@ -43,12 +43,15 @@ class Login extends Component {
 		fetch(`/api/isRegister?username=${username}`)
 			.then((res) => (res.json())).then((res) => {
 				const { message } = res || {}
-				if (message) {
+
+				if (message !== '用户名重复') {
 					fetch(`/api/register?username=${username}&password=${password}`)
 						.then((res) => (res.json()))
 						.then((res) => {
-							console.log()
+							alert('注册成功')
 					})
+				} else {
+					alert(message)
 				}
 		})
 	}
@@ -60,6 +63,9 @@ class Login extends Component {
 			const { message } = res || {}
 			if (message === '登录成功') {
 				localStorage.username = username 
+				this.props.history.push('/')
+			} else {
+				alert(message)
 			}
 		})
 	}

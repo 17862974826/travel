@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../../assert/style/swiper.min.css'
 import swiper from '../../../node_modules/swiper/dist/js/swiper.min.js'
+import { Link } from 'react-router-dom'
 
 import style from './style/view.mcss'
 
@@ -18,9 +19,13 @@ class View extends Component {
 		const { data: {
 			navigator = [],
 			playing = [],
-			sight = []
+			sight = [],
+			hotel = [],
+			travel = []
 		} = {},
 		navIndex } = this.state || {};
+
+		const {imgUrl: hoterImg, data: hotelData } = hotel[0] || {}
 
 		let renderSight = ''
 		if (!Array.isArray(sight) || !sight.length) {
@@ -54,7 +59,7 @@ class View extends Component {
 					}
 				</div>	
 				<div className={style.contentCon}>
-					{renderSight}
+					<Link to='/playDetail'>{renderSight}</Link>
 					<div className={style.playingCon}>
 						<h3 className={style.playingTitle}>玩法路线</h3>
 						<div className="swiper-container" ref={swiper => {this.swiperRef = swiper}}>
@@ -79,6 +84,34 @@ class View extends Component {
 					  </div>
 					</div>
 				</div>
+				<Link to={'/hotelDetail/lijiangl'} style={{padding: '0 10px',  display: 'block'}}>
+					<p className={style.hoterWrap}>{hotel.length ? '酒店攻略' : null}</p>
+					<img src={hoterImg } alt={''} className={style.hotelImg}/>
+					{
+						Array.isArray(hotelData) && hotelData.length ? (hotelData.map((itemData, index) => {
+							const { title, subTitle, content } = itemData || {}
+							return (<div key={`hotelData-${index}`} className={style.hotelContainer}>
+								<p className={style.hotelTitle}>{title}</p>
+								<p className={style.hotelSubTitle}>{subTitle}</p>
+								<p className={style.hotelContent}a>{content}</p>
+							</div>)
+						})) : null 
+					}
+				</Link>
+				<Link to={'/calendarList'} style={{padding: '20px 10px 0',  display: 'block'}}>
+					<p className={style.travelWrap}>{travel.length ? '热门游记' : null}</p>
+					{
+						Array.isArray(travel) && travel.length ? (travel.map((itemData, index) => {
+							const { title, imgUrl } = itemData || {}
+							return (<div key={`hotelData-${index}`} className={style.travelContainer}>
+								<img src={imgUrl} className={style.travelImg}/>
+								<p className={style.travelTitle}>{title}</p>
+								<div className={style.mask}></div>
+							</div>)
+						})) : null 
+					}
+				</Link>
+
 			</div>
 		)
 	}
@@ -89,7 +122,6 @@ class View extends Component {
 				initialSlide: 0,
 			 	observer:true,
 			 	observeParents:true,
-			 	loop: true
 		})
 	}
 

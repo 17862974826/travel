@@ -15,14 +15,14 @@ class View extends Component {
 
 	render() {
 		const { data: {
-			banner = "https://images.mafengwo.net/mobile/images/together/topNum-bg.jpg",
-			travelPlans = "363567",
-			people = "148437",
-			targets = "376485",
-			teams = [],
+			banner,
+			travelPlans,
+			people,
+			targets,
+			teams = Array(1).fill({}),
 			distances = [],
 			startDate = []
-		}, targetActiveFlag, timeActiveFlag } = this.state || {}
+		}, targetActiveFlag, timeActiveFlag } = this.state
 		let _renderlist = ""
 		if (!Array.isArray(teams) || !teams.length) {
 			_renderlist = (<div className={style.try}>发起结伴试试！</div>)
@@ -30,10 +30,10 @@ class View extends Component {
 			_renderlist = (
 				<ul style={{overflow: 'hidden'}}>
 					{
-						teams.map((item, index) => (
-							<li className={style.item} key={item.id}>
-						    <a href="https://m.mafengwo.cn/together/detail/2147475.html">
-					        <div className={style.cover}>
+						teams.filter(item => item).map((item, index) => (
+							<li className={style.item} key={item.id || index}>
+						  
+					        <div className={style.cover} onClick={this.handleEnterTravel.bind(this, item.name)}>
 				            <img src={item.imgUrl} alt="" />
 				            <div className={style.title}>
 				                <h3>{item.title}</h3>
@@ -48,7 +48,7 @@ class View extends Component {
 				            <span className={style.location}>{item.location}</span>
 				            <p className={style.txt}>{item.desc}</p>
 					        </div>
-						    </a>
+						    
 							</li>
 						))
 					}
@@ -61,10 +61,7 @@ class View extends Component {
 				<Link to="/">
 					<div className={style.header}>官网首页</div>
 				</Link>
-				<div className={style.tab}>
-					<div onClick={this.showDistances} className={!targetActiveFlag ? style.target : style.activeTab}>目的地</div>
-					<div onClick={this.showStartDate}  className={!timeActiveFlag ? style.time : style.activeTab }>全部出发时间</div>
-				</div>
+				
 				<div className={style.content}>
 					<div className={style.banner}>
 				    <img width="100%" src={banner} alt=""/>
@@ -122,8 +119,19 @@ class View extends Component {
 		this.getData()
 	}
 
+	handleEnterTravel = (ownerUser) => {
+		const  addUser = localStorage.username
+		fetch(`/api/addMate?ownerUser=${ownerUser}&addUser=${addUser}`)
+			.then(res => res.json())
+			.then(res => {
+				const { message } = res
+				alert(message || '操作异常')
+			})
+		
+	}
+
 	getData = () => {
-		fetch('/api/mate.json')
+		fetch('/api/getMateData')
 			.then(res => res.json())
 			.then(res => {
 				res = res.data

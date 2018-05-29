@@ -6,6 +6,7 @@ class View extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
+			status: 'loading',
 			data: {},
 			textareaValue: '',
 			imgs: [],
@@ -15,12 +16,14 @@ class View extends Component {
 	}
 
 	render() {
-		const { data: { strategy } = {}, textareaValue, imgs } = this.state || {}
+
+		const { data: { strategy } = {}, textareaValue, imgs, status } = this.state 
+
 		let renderStrategy = ""
-		if (!Array.isArray(strategy) || !strategy.length) {
-			renderStrategy = (<div className={style.nothing}>还没有攻略哦</div>)
+		if ((!Array.isArray(strategy) || !strategy.length) && status !== 'loading') {
+			renderStrategy = (<div className={style.nothing}>还没有动态哦</div>)
 		} else {
-			renderStrategy = strategy.map((item, index) => (
+			renderStrategy = Array.isArray(strategy) && strategy.length ? strategy.map((item, index) => (
 				<div key={item.id} className={style.itemCon}>
 					<div className={style.authorInfo}>
 						<div className={style.picCon}>
@@ -44,13 +47,13 @@ class View extends Component {
 						</div>
 					</div>
 				</div>
-			))
+			)) : null
 		}
 
 		return (
 			<div className={style.wrapper}>
 				<div className={style.header}>
-					<p className={style.find}>找攻略</p>
+					<p className={style.find}>看动态</p>
 					<p className={style.publish} onClick={this.handleShowPublish}>发布</p>
 				</div>
 				<div className={style.publishCon} ref={publish => this.publish = publish}>
@@ -110,7 +113,9 @@ class View extends Component {
 			.then(res => res && res.json())
 			.then(res => {
 				const { data = {}} = res
+				console.log(data)
 				this.setState({
+					status: 'loaded',
 					data
 				})
 			})
@@ -143,30 +148,18 @@ class View extends Component {
 	}
 
 	handlePublish = () => {
-		this.publish.style.height = '0'
-		this.publish.style.opacity = 0
-		this.publish.style.padding = '0'
-
-		// const _formdata = this.formdata.append('file', this.uploadFile.files[0]);
-
 		const { textareaValue } = this.state || {}
+		const { username } = localStorage
 
 		if (!textareaValue || !textareaValue.length) return
-		// fetch('/api/upload.json', {
-		// 	body: {
-		// 		textareaValue,
-		// 		formdata: _formdata
-		// 	},
-		// 	contentType: false,
-		// 	processData: false,
-	 //    cache: 'no-cache',
-	 //    method: 'POST',
-	 //    mode: 'cors', 
-	 //    referrer: 'no-referrer'
-		// }).then(res => res.json())
-		// 	.then(res => {
-		// 		// 上传成功，重新请求数据
-		// 	})
+
+		fetch(`/api/addDynamic?username=${username}&content=${textareaValue}`).then(res => {
+			this.publish.style.height = '0'
+		this.publish.style.opacity = 0
+		this.publish.style.padding = '0'
+			this.getData()
+		})
+		
 	}
 	
 	getImgBase = () => {
